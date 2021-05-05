@@ -1,0 +1,13 @@
+C:\Users\sebastian.bergstro2\Desktop\Prog2\TryingShit\Playermaker\obj\Debug\netcoreapp3.1\Playermaker.csprojAssemblyReference.cache
+C:\Users\sebastian.bergstro2\Desktop\Prog2\TryingShit\Playermaker\obj\Debug\netcoreapp3.1\Playermaker.AssemblyInfoInputs.cache
+C:\Users\sebastian.bergstro2\Desktop\Prog2\TryingShit\Playermaker\obj\Debug\netcoreapp3.1\Playermaker.AssemblyInfo.cs
+C:\Users\sebastian.bergstro2\Desktop\Prog2\TryingShit\Playermaker\obj\Debug\netcoreapp3.1\Playermaker.csproj.CoreCompileInputs.cache
+C:\Users\sebastian.bergstro2\Desktop\Prog2\TryingShit\Playermaker\bin\Debug\netcoreapp3.1\Playermaker.exe
+C:\Users\sebastian.bergstro2\Desktop\Prog2\TryingShit\Playermaker\bin\Debug\netcoreapp3.1\Playermaker.deps.json
+C:\Users\sebastian.bergstro2\Desktop\Prog2\TryingShit\Playermaker\bin\Debug\netcoreapp3.1\Playermaker.runtimeconfig.json
+C:\Users\sebastian.bergstro2\Desktop\Prog2\TryingShit\Playermaker\bin\Debug\netcoreapp3.1\Playermaker.runtimeconfig.dev.json
+C:\Users\sebastian.bergstro2\Desktop\Prog2\TryingShit\Playermaker\bin\Debug\netcoreapp3.1\Playermaker.dll
+C:\Users\sebastian.bergstro2\Desktop\Prog2\TryingShit\Playermaker\bin\Debug\netcoreapp3.1\Playermaker.pdb
+C:\Users\sebastian.bergstro2\Desktop\Prog2\TryingShit\Playermaker\obj\Debug\netcoreapp3.1\Playermaker.dll
+C:\Users\sebastian.bergstro2\Desktop\Prog2\TryingShit\Playermaker\obj\Debug\netcoreapp3.1\Playermaker.pdb
+C:\Users\sebastian.bergstro2\Desktop\Prog2\TryingShit\Playermaker\obj\Debug\netcoreapp3.1\Playermaker.genruntimeconfig.cache
