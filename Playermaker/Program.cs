@@ -116,7 +116,7 @@ namespace Playermaker
             Console.Clear();
             System.Console.WriteLine("Check players or teams");
             string choice = Console.ReadLine();
-            if (choice == "players" || choice == "1")
+            while (choice == "players" || choice == "1")
             {
                 // Hur man lägger till personer i listan
                 Player.playerData.Add(new Player("Boing boing", "Outside Hitter", "Kristoffer", "See", 69, 18, "righ", 182, 80, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99));
@@ -156,7 +156,6 @@ namespace Playermaker
                 int choice2p;
                 if(choice2 == "1" || choice2 == "div1")
                 {
-                    lookingAtD1 = true;
                     for (int div1Teams = 0; div1Teams < 20; div1Teams++)
                     {
                         div1.Add(League.divTeam[0,div1Teams].name);
@@ -171,147 +170,17 @@ namespace Playermaker
                             System.Console.WriteLine("["+ (div1Teams + 1) +"] " + div1.ToArray()[div1Teams]);
                         }
                         string Choice2p1 = Console.ReadLine();
-                        if (Choice2p1 == "1" || Choice2p1 == div1.ToArray()[0].ToString())
+                        for (int whatTeam = 0; whatTeam < div1.ToArray().Length; whatTeam++)
                         {
-                            Console.Clear();
-                            choice2p = 0;
-                            CheckD1Team(choice2p, space16, space12, div1);
-                            Console.ReadLine();
+                            if(Choice2p1 == (whatTeam +1).ToString() || Choice2p1 == div1.ToArray()[(whatTeam)].ToString())
+                            {
+                                Console.Clear();
+                                choice2p = whatTeam;
+                                CheckD1Team(choice2p, space16, space12, div1);
+                                Console.ReadLine();
+                            }
                         }
-                        else if (Choice2p1 == "2" || Choice2p1 == div1.ToArray()[1].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 1;
-                            CheckD1Team(choice2p, space16, space12, div1);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p1 == "3" || Choice2p1 == div1.ToArray()[2].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 2;
-                            CheckD1Team(choice2p, space16, space12, div1);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p1 == "4" || Choice2p1 == div1.ToArray()[3].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 3;
-                            CheckD1Team(choice2p, space16, space12, div1);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p1 == "5" || Choice2p1 == div1.ToArray()[4].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 4;
-                            CheckD1Team(choice2p, space16, space12, div1);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p1 == "6" || Choice2p1 == div1.ToArray()[5].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 5;
-                            CheckD1Team(choice2p, space16, space12, div1);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p1 == "7" || Choice2p1 == div1.ToArray()[6].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 6;
-                            CheckD1Team(choice2p, space16, space12, div1);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p1 == "8" || Choice2p1 == div1.ToArray()[7].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 7;
-                            CheckD1Team(choice2p, space16, space12, div1);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p1 == "9" || Choice2p1 == div1.ToArray()[8].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 8;
-                            CheckD1Team(choice2p, space16, space12, div1);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p1 == "10" || Choice2p1 == div1.ToArray()[9].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 9;
-                            CheckD1Team(choice2p, space16, space12, div1);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p1 == "11" || Choice2p1 == div1.ToArray()[10].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 10;
-                            CheckD1Team(choice2p, space16, space12, div1);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p1 == "12" || Choice2p1 == div1.ToArray()[11].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 11;
-                            CheckD1Team(choice2p, space16, space12, div1);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p1 == "13" || Choice2p1 == div1.ToArray()[12].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 12;
-                            CheckD1Team(choice2p, space16, space12, div1);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p1 == "14" || Choice2p1 == div1.ToArray()[13].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 13;
-                            CheckD1Team(choice2p, space16, space12, div1);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p1 == "15" || Choice2p1 == div1.ToArray()[14].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 14;
-                            CheckD1Team(choice2p, space16, space12, div1);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p1 == "16" || Choice2p1 == div1.ToArray()[15].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 15;
-                            CheckD1Team(choice2p, space16, space12, div1);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p1 == "17" || Choice2p1 == div1.ToArray()[16].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 16;
-                            CheckD1Team(choice2p, space16, space12, div1);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p1 == "18" || Choice2p1 == div1.ToArray()[17].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 17;
-                            CheckD1Team(choice2p, space16, space12, div1);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p1 == "19" || Choice2p1 == div1.ToArray()[18].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 18;
-                            CheckD1Team(choice2p, space16, space12, div1);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p1 == "20" || Choice2p1 == div1.ToArray()[19].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 19;
-                            CheckD1Team(choice2p, space16, space12, div1);
-                            Console.ReadLine();
-                        }
-                        else
+                        if(Choice2p1 == "" || Choice2p1 == "back" || Choice2p1 == "b")
                         {
                             break;
                         }
@@ -319,7 +188,6 @@ namespace Playermaker
                 }
                 else if(choice2 == "2" || choice2 == "div2")
                 {
-                    lookingAtD2 = true;
                     for (int div2Teams = 0; div2Teams < 20; div2Teams++)
                     {
                         div2.Add(League.divTeam[1,div2Teams].name);
@@ -334,147 +202,17 @@ namespace Playermaker
                             System.Console.WriteLine("["+ (div2Teams + 1) +"] " + div2.ToArray()[div2Teams]);
                         }
                         string Choice2p2 = Console.ReadLine();
-                        if (Choice2p2 == "1" || Choice2p2 == div2.ToArray()[0].ToString())
+                        for (int whatTeam = 0; whatTeam < div2.ToArray().Length; whatTeam++)
                         {
-                            Console.Clear();
-                            choice2p = 0;
-                            CheckD2Team(choice2p, space16, space12, div2);
-                            Console.ReadLine();
+                            if(Choice2p2 == (whatTeam +1).ToString() || Choice2p2 == div2.ToArray()[(whatTeam)].ToString())
+                            {
+                                Console.Clear();
+                                choice2p = whatTeam;
+                                CheckD2Team(choice2p, space16, space12, div2);
+                                Console.ReadLine();
+                            }
                         }
-                        else if (Choice2p2 == "2" || Choice2p2 == div2.ToArray()[1].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 1;
-                            CheckD2Team(choice2p, space16, space12, div2);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p2 == "3" || Choice2p2 == div2.ToArray()[2].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 2;
-                            CheckD2Team(choice2p, space16, space12, div2);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p2 == "4" || Choice2p2 == div2.ToArray()[3].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 3;
-                            CheckD2Team(choice2p, space16, space12, div2);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p2 == "5" || Choice2p2 == div2.ToArray()[4].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 4;
-                            CheckD2Team(choice2p, space16, space12, div2);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p2 == "6" || Choice2p2 == div2.ToArray()[5].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 5;
-                            CheckD2Team(choice2p, space16, space12, div2);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p2 == "7" || Choice2p2 == div2.ToArray()[6].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 6;
-                            CheckD2Team(choice2p, space16, space12, div2);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p2 == "8" || Choice2p2 == div2.ToArray()[7].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 7;
-                            CheckD2Team(choice2p, space16, space12, div2);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p2 == "9" || Choice2p2 == div2.ToArray()[8].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 8;
-                            CheckD2Team(choice2p, space16, space12, div2);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p2 == "10" || Choice2p2 == div2.ToArray()[9].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 9;
-                            CheckD2Team(choice2p, space16, space12, div2);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p2 == "11" || Choice2p2 == div2.ToArray()[10].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 10;
-                            CheckD2Team(choice2p, space16, space12, div2);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p2 == "12" || Choice2p2 == div2.ToArray()[11].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 11;
-                            CheckD2Team(choice2p, space16, space12, div2);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p2 == "13" || Choice2p2 == div2.ToArray()[12].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 12;
-                            CheckD2Team(choice2p, space16, space12, div2);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p2 == "14" || Choice2p2 == div2.ToArray()[13].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 13;
-                            CheckD2Team(choice2p, space16, space12, div2);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p2 == "15" || Choice2p2 == div2.ToArray()[14].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 14;
-                            CheckD2Team(choice2p, space16, space12, div2);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p2 == "16" || Choice2p2 == div2.ToArray()[15].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 15;
-                            CheckD2Team(choice2p, space16, space12, div2);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p2 == "17" || Choice2p2 == div2.ToArray()[16].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 16;
-                            CheckD2Team(choice2p, space16, space12, div2);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p2 == "18" || Choice2p2 == div2.ToArray()[17].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 17;
-                            CheckD2Team(choice2p, space16, space12, div2);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p2 == "19" || Choice2p2 == div2.ToArray()[18].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 18;
-                            CheckD2Team(choice2p, space16, space12, div2);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p2 == "20" || Choice2p2 == div2.ToArray()[19].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 19;
-                            CheckD2Team(choice2p, space16, space12, div2);
-                            Console.ReadLine();
-                        }
-                        else
+                        if(Choice2p2 == "" || Choice2p2 == "back" || Choice2p2 == "b")
                         {
                             break;
                         }
@@ -496,147 +234,17 @@ namespace Playermaker
                             System.Console.WriteLine("["+ (div3Teams + 1) +"] " + div3.ToArray()[div3Teams]);
                         }
                         string Choice2p3 = Console.ReadLine();
-                        if (Choice2p3 == "1" || Choice2p3 == div3.ToArray()[0].ToString())
+                        for (int whatTeam = 0; whatTeam < div3.ToArray().Length; whatTeam++)
                         {
-                            Console.Clear();
-                            choice2p = 0;
-                            CheckD3Team(choice2p, space16, space12, div3);
-                            Console.ReadLine();
+                            if(Choice2p3 == (whatTeam +1).ToString() || Choice2p3 == div3.ToArray()[whatTeam].ToString())
+                            {
+                                Console.Clear();
+                                choice2p = whatTeam;
+                                CheckD3Team(choice2p, space16, space12, div3);
+                                Console.ReadLine();
+                            }
                         }
-                        else if (Choice2p3 == "2" || Choice2p3 == div3.ToArray()[1].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 1;
-                            CheckD3Team(choice2p, space16, space12, div3);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p3 == "3" || Choice2p3 == div3.ToArray()[2].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 2;
-                            CheckD3Team(choice2p, space16, space12, div3);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p3 == "4" || Choice2p3 == div3.ToArray()[3].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 3;
-                            CheckD3Team(choice2p, space16, space12, div3);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p3 == "5" || Choice2p3 == div3.ToArray()[4].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 4;
-                            CheckD3Team(choice2p, space16, space12, div3);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p3 == "6" || Choice2p3 == div3.ToArray()[5].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 5;
-                            CheckD3Team(choice2p, space16, space12, div3);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p3 == "7" || Choice2p3 == div3.ToArray()[6].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 6;
-                            CheckD3Team(choice2p, space16, space12, div3);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p3 == "8" || Choice2p3 == div3.ToArray()[7].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 7;
-                            CheckD3Team(choice2p, space16, space12, div3);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p3 == "9" || Choice2p3 == div3.ToArray()[8].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 8;
-                            CheckD3Team(choice2p, space16, space12, div3);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p3 == "10" || Choice2p3 == div3.ToArray()[9].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 9;
-                            CheckD3Team(choice2p, space16, space12, div3);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p3 == "11" || Choice2p3 == div3.ToArray()[10].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 10;
-                            CheckD3Team(choice2p, space16, space12, div3);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p3 == "12" || Choice2p3 == div3.ToArray()[11].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 11;
-                            CheckD3Team(choice2p, space16, space12, div3);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p3 == "13" || Choice2p3 == div3.ToArray()[12].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 12;
-                            CheckD3Team(choice2p, space16, space12, div3);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p3 == "14" || Choice2p3 == div3.ToArray()[13].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 13;
-                            CheckD3Team(choice2p, space16, space12, div3);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p3 == "15" || Choice2p3 == div3.ToArray()[14].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 14;
-                            CheckD3Team(choice2p, space16, space12, div3);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p3 == "16" || Choice2p3 == div3.ToArray()[15].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 15;
-                            CheckD3Team(choice2p, space16, space12, div3);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p3 == "17" || Choice2p3 == div3.ToArray()[16].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 16;
-                            CheckD3Team(choice2p, space16, space12, div3);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p3 == "18" || Choice2p3 == div3.ToArray()[17].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 17;
-                            CheckD3Team(choice2p, space16, space12, div3);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p3 == "19" || Choice2p3 == div3.ToArray()[18].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 18;
-                            CheckD3Team(choice2p, space16, space12, div3);
-                            Console.ReadLine();
-                        }
-                        else if (Choice2p3 == "20" || Choice2p3 == div3.ToArray()[19].ToString())
-                        {
-                            Console.Clear();
-                            choice2p = 19;
-                            CheckD3Team(choice2p, space16, space12, div3);
-                            Console.ReadLine();
-                        }
-                        else
+                        if(Choice2p3 == "" || Choice2p3 == "back" || Choice2p3 == "b")
                         {
                             break;
                         }
